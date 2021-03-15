@@ -1,0 +1,182 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html{
+	width: 100%;
+	height: 100%;
+} 
+
+body{
+	width: 100%;
+	min-height: 100%;
+	padding-bottom: 5vh;
+}
+
+header{
+	height: 10vh;
+	background-color: yellow;
+}
+
+.json_maker_option_container{
+	height: 5vh;
+	display: flex;
+
+}
+
+.json_maker_filename{
+	width: 50%;
+	height: 100%;
+	background-color: gray;
+}
+
+.json_maker_option_list{
+	width: 45%;
+	height: 100%;
+	display: flex;
+}
+
+.json_maker_option{
+	width: 33%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: orange;
+}
+
+.json_maker_option a{
+	text-decoration: none;
+}
+
+.json_maker_close_btn{
+	width: 5%;
+	height: 100%;
+}
+
+.show_form{
+	opacity: 1;
+	z-index: 1;
+}
+
+form{
+	opacity: 0;
+	width: 60%;
+	min-height: 70vh;
+	background-color: #fdfdfd;
+	margin: 0 auto;
+	margin-top: 5vh;
+	box-shadow: -1px 1px 5px 1px #333;
+	padding-bottom: 10px;
+	z-index: -1;
+	transition: opacity .6s, z-index .6s;
+}
+
+.json_maker_header_container{
+	width: 100%;
+	height: 9vh;
+	background-color: yellow;
+	margin-bottom: 5px;
+}
+
+.json_maker_header_name{
+	display: inline-block;
+	height: 9vh;
+	width: 68.3%;
+}
+
+.json_maker_name{
+
+}
+
+.json_maker_header_name > p{
+	display: inline-block;
+	height: 9vh;
+	width: 80%;
+	line-height: 9vh;
+	padding-left: 10px;
+
+}
+
+.json_maker_entry_count{
+	width: 10%;
+	height: 80%;
+	border-radius: 5px;
+	background-color: white;
+}
+
+.json_maker_add_btn{
+	width: 15%;
+	height: 80%;
+	background-color: white;
+	border-radius: 5px;
+}
+
+.json_maker_save_btn{
+	width: 15%;
+	height: 80%;
+	background-color: white;
+	border-radius: 5px;
+}
+
+.json_maker_body{
+	width: 100%;
+	min-height: 67vh;
+	background-color: transparent;
+}
+
+.json_maker_entry_container{
+	height: 15vh;
+	width: 90%;
+	border-bottom: thin black solid;
+	margin: 0 auto;
+	margin-top: 5px;
+	background-color: white;
+	box-shadow: -1px 1px 4px #333;
+}
+
+
+.json_maker_modal_container{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.7);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+.json_maker_modal{
+	width: 45%;
+	height: 65%;
+	background-color: white;
+	border-radius: 8px;
+}
+
+.json_maker_modal_header{
+	width: 100%;
+	height: 15%;
+	background-color: yellow;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+.json_maker_modal_message{
+	height: 30%;
+	width: 100%;
+	background-color: white;
+}
+
+.json_maker_modal_close_btn{
+	width: 20%;
+	height: 10%;
+	border-radius: 5px;
+	position: relative;
+	top: 32%;
+	left: 77%;
+}

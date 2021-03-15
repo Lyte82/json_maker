@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JSON Maker</title>
+	<link rel="stylesheet" type="text/css" href="json_maker.css">
+	<script type="text/javascript" src="json_maker.js"></script>
+</head>
+<body>
+	<header>
+		<h1>JSON Maker</h1>
+	</header>
+	<div class="json_maker_option_container">
+		<div class="json_maker_filename" contenteditable="true">please name this file</div>
+		<ul class="json_maker_option_list">
+			<li class="json_maker_option"><a href="" id="Object">Object</a></li>
+			<li class="json_maker_option"><a href="" id="Array">Array</a></li>
+		</ul>
+		<button class="json_maker_close_btn">x</button>
+	</div>
+	<form method="POST" action="send" class="json_maker_form">
+		<div class="json_maker_header_container">
+			<div class="json_maker_header_name">
+				<p class="json_maker_name"></p>
+				<button class="json_maker_entry_count"></button>
+			</div>
+            <button class="json_maker_add_btn">Add</button>                   
+            <button type="submit" class="json_maker_save_btn">Save</button>
+        </div>
+        <div class="json_maker_body"></div>
+    </form>
+    <div class="json_maker_modal_container">
+    	<div class="json_maker_modal">
+    		<div class="json_maker_modal_header"></div>
+    		<p class="json_maker_modal_message"></p>
+    		<button class="json_maker_modal_close_btn">Close</button>
+    	</div>
+    </div>
+
+    <!-- TODO
+    	find option to edit json -->
+
+</body>
+</html>
