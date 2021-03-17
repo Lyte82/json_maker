@@ -27,11 +27,15 @@ document.addEventListener('DOMContentLoaded', function(){
         let entryObj = `<div class="json_maker_entry_container">
                             <input type="text" name="name" placeholder="enter name">
                             <input type="text" name="value" placeholder="enter value">
+                            <div class="json_maker_nest"><button class="json_maker_nest_remove_btn">x</button></div>
                             <button class="json_maker_remove_entry_btn"><i class="fas fa-trash"></i></button>
+                            <button class="json_maker_nest_btn">Nest</button>
                         </div>`;
         let entryArray = `<div class="json_maker_entry_container">
                             <input type="text" name="value" placeholder="enter value" class="array_input">
+                            <div class="json_maker_nest"></div>
                             <button class="json_maker_remove_entry_btn"><i class="fas fa-trash"></i></button>
+                            <button class="json_maker_nest_btn">Nest</button>
                           </div>`;
         let optionObj = {
             "Object": entryObj,
@@ -101,6 +105,25 @@ document.addEventListener('DOMContentLoaded', function(){
         event.target.nodeName === "I" ? event.target.parentNode.parentNode.remove() : event.target.parentNode.remove();
         getEntryCount(); 
     });
+
+    document.body.addEventListener('click', function(event){
+        if(event.target.className !== "json_maker_nest_btn") return;
+        let parent = event.target.parentNode;
+        parent.querySelector('input[name="value"]').style.display = "none";
+        parent.querySelector('.json_maker_nest').style.display = 'inline-block';
+        event.target.style.display = 'none';
+
+    });
+
+    document.body.addEventListener('click', function(event){
+        if(event.target.className !== 'json_maker_nest_remove_btn') return;
+        event.target.parentNode.style.display = 'none';
+        let grandparent = event.target.parentNode.parentNode;
+        console.log('wee')
+        grandparent.querySelector('input[name="value"]').style.display = "inline-block";
+        grandparent.querySelector('.json_maker_nest_btn').style.display = "inline-block";
+
+    })
 
     json_maker_filename.addEventListener('keyup', function(event){
         name = event.target.innerHTML;

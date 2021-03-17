@@ -160,24 +160,44 @@ form{
 	margin-top: 5px;
 	background-color: white;
 	box-shadow: -1px 1px 4px #333;
-	padding-left: 5px;
 	padding-top: 5px;
+	display: flex;
 }
 
 input[name='name']{
 	width: 46%;
 	height: 6vh;
 	padding-left: 5px;
+	margin-left: 5px;
 }
 
 input[name='value']{
 	width: 46%;
 	height: 6vh;
 	padding-left: 5px;
+	margin-left: 5px;
 }
 
 input.array_input{
 	width: 85%;
+}
+
+.json_maker_nest{
+	width: 46%;
+	height: 95%;
+	border:thin #333 solid;
+	display: none;
+	margin-left: 5px;
+
+}
+
+.json_maker_nest_btn{
+	position: relative;
+	top: 50%;
+	left: -46%;
+	width: 10%;
+	height: 6vh;
+	background-color: #0000e0;
 }
 
 .json_maker_remove_entry_btn{
@@ -186,6 +206,7 @@ input.array_input{
 	color: red;
 	outline: none;
 	box-shadow: -0.5px 0.5px 1.5px #333;
+	margin-left: 5px;
 }
 
 .json_maker_remove_entry_btn:hover{
