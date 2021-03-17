@@ -17,7 +17,7 @@ body{
 
 header{
 	height: 10vh;
-	background-color: yellow;
+	background-color: #fff44f;
 }
 
 .json_maker_option_container{
@@ -70,7 +70,7 @@ header{
 	width: 3%;
 	height: 100%;
 	outline: none;
-	border: thin white solid;
+	border: thin #caca42 solid;
 	background-color: #f00000;
 	color: white;
 }
@@ -139,11 +139,21 @@ form{
 	border-radius: 5px;
 }
 
+.json_maker_add_btn:hover{
+	cursor: pointer;
+	background-color: #e8e8e8;
+}
+
 .json_maker_save_btn{
 	width: 15%;
 	height: 80%;
 	background-color: white;
 	border-radius: 5px;
+}
+
+.json_maker_save_btn:hover{
+	cursor: pointer;
+	background-color: #e8e8e8;
 }
 
 .json_maker_body{
@@ -160,54 +170,76 @@ form{
 	margin-top: 5px;
 	background-color: white;
 	box-shadow: -1px 1px 4px #333;
-	padding-top: 5px;
-	display: flex;
+	position: relative;
 }
 
 input[name='name']{
+	position: absolute;
+	top: 5px;
+	left: .7%;
 	width: 46%;
 	height: 6vh;
 	padding-left: 5px;
-	margin-left: 5px;
 }
 
 input[name='value']{
+	position: absolute;
+	top: 5px;
+	left: 47.4%;
 	width: 46%;
 	height: 6vh;
 	padding-left: 5px;
-	margin-left: 5px;
 }
 
 input.array_input{
-	width: 85%;
+	width: 92%;
+    position: absolute;
+    left: 1%;
 }
 
-.json_maker_nest{
-	width: 46%;
-	height: 95%;
-	border:thin #333 solid;
-	display: none;
-	margin-left: 5px;
-
-}
-
-.json_maker_nest_btn{
-	position: relative;
-	top: 50%;
-	left: -46%;
-	width: 10%;
-	height: 6vh;
-	background-color: #0000e0;
+input:hover{
+	cursor: pointer;
 }
 
 .json_maker_remove_entry_btn{
+	position: absolute;
+	top: 8px;
+	left: 94.1%;
 	width: 5%;
 	height: 5vh;
 	color: red;
 	outline: none;
 	box-shadow: -0.5px 0.5px 1.5px #333;
-	margin-left: 5px;
 }
+
+.json_maker_nest{
+	position: absolute;
+	top: 5px;
+	left: 47.4%;
+	width: 46%;
+	height: 90%;
+	border:thin #333 solid;
+	display: none;
+}
+
+.json_maker_nest_btn{
+	position: absolute;
+	top: calc(6vh + 10px);
+	left: 47.4%;
+	width: 10%;
+	height: 5vh;
+	background-color: #0000e0;
+	color: white;
+	outline: none;
+    border: thin #caca42 solid;
+    border-radius: 3px;
+}
+
+.json_maker_nest_btn:hover{
+	cursor: pointer;
+	background-color: #2424ff;
+}
+
 
 .json_maker_remove_entry_btn:hover{
 	cursor: pointer;
@@ -224,6 +256,70 @@ input.array_input{
 	width: 100%;
 	height: 100%;
 	display: none;
+}
+
+.json_maker_nest_remove_btn{
+	width: 10%;
+	height: 30%;
+	position: relative;
+	left: 89%;
+	top: 2%;
+	background-color: #f00000;
+	color: white;
+	outline: none;
+    border: thin #caca42 solid;
+    border-radius: 3px;
+}
+
+.json_maker_nest_remove_btn:hover{
+	cursor: pointer;
+	background-color: #d00000;
+}
+
+.json_maker_remove_btn:hover{
+	cursor: pointer;
+	background-color: #d00000;
+}
+
+.json_maker_status{
+	position: absolute;
+	width: 35%;
+	height: 50%; 
+	top: 5%;
+	left: 3%;
+	font-size: 20px;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	border: thin blue solid;
+	border-radius: 5px;
+}
+
+.json_maker_nest_list{
+	width: 100%;
+	height: 40%;
+	background-color: yellow;
+	display: flex;
+	position: relative;
+	top: 30%;
+	border-top: thin #caca42 solid;
+}
+
+.json_maker_nest_option{
+	text-decoration: none;
+	width: 30%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.json_maker_nest_option:hover{
+	background-color: #caca42;
+}
+
+.json_maker_nest_option a{
+	text-decoration: none;
 }
 
 .json_maker_modal{
@@ -262,3 +358,127 @@ input.array_input{
 	top: 32%;
 	left: 77%;
 }
+
+.json_maker_nest_modal{
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255,255,255,.5);
+	justify-content: center;
+	align-items: center;
+}
+
+.json_maker_nest_form{
+	width: 50%;
+	height: 75%;
+	background-color: white;
+	box-shadow: -1px 1px 2px #333;
+	border-radius: 8px;
+}
+
+.json_maker_nest_header_name{
+	display: inline-block;
+	height: 9vh;
+	width: 60.3%;
+}
+
+.json_maker_nest_header_name > p{
+	display: inline-block;
+	height: 9vh;
+	width: 80%;
+	line-height: 9vh;
+	padding-left: 10px;
+
+}
+
+.json_maker_nest_entry_count{
+	width: 10%;
+	height: 80%;
+	border-radius: 5px;
+	background-color: white;
+}
+
+.json_maker_nest_close_btn{
+	width: 5%;
+	height: 50%;
+	background-color: #f00000;
+	outline: none;
+	border: thin #caca42 solid;
+	border-radius: 3px;
+	color: white;
+}
+
+.json_maker_nest_close_btn:hover{
+	cursor: pointer;
+	background-color: #d00000;
+}
+
+.json_maker_nest_add_btn{
+	width: 15%;
+	height: 80%;
+	background-color: white;
+	border-radius: 5px;
+}
+
+.json_maker_nest_add_btn:hover{
+	cursor: pointer;
+	background-color: #e8e8e8;
+}
+
+.json_maker_nest_save_btn{
+	width: 15%;
+	height: 80%;
+	background-color: white;
+	border-radius: 5px;
+}
+
+.json_maker_nest_save_btn:hover{
+	cursor: pointer;
+	background-color: #e8e8e8;
+}
+
+.json_maker_nest_body{
+	width: 100%;
+	min-height: 67vh;
+	background-color: transparent;
+}
+
+/*.json_maker_entry_container{
+	height: 15vh;
+	width: 90%;
+	border-bottom: thin black solid;
+	margin: 0 auto;
+	margin-top: 5px;
+	background-color: white;
+	box-shadow: -1px 1px 4px #333;
+	position: relative;
+}
+
+input[name='name']{
+	position: absolute;
+	top: 5px;
+	left: .7%;
+	width: 46%;
+	height: 6vh;
+	padding-left: 5px;
+}
+
+input[name='value']{
+	position: absolute;
+	top: 5px;
+	left: 47.4%;
+	width: 46%;
+	height: 6vh;
+	padding-left: 5px;
+}
+
+input.array_input{
+	width: 85%;
+}
+
+input:hover{
+	cursor: pointer;
+}*/
